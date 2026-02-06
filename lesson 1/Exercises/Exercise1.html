@@ -6,12 +6,15 @@
   <body>
     <div class="js-container"></div>
 
+    <script src="https://unpkg.com/supersimpledev@8.6.4/dayjs.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
+
+    
 
     
 
@@ -22,7 +25,7 @@
         console.log(productCost)
 
         const shippingCost = 5;
-      
+        console.log(dayjs().format('MMMM D'))
         const exercises1 = (
             <div>
                 <button>Good Job!</button>
@@ -33,6 +36,8 @@
                 <p>Product cost: ${productCost}</p>
                 <p>Shipping cost cost: ${shippingCost}</p>
                 <p>Total cost: ${productCost + shippingCost}</p>
+                <p>today is {dayjs().format('MMMM D')}</p>
+                <p>Current time: {dayjs().format('HH:mm:ss')}</p>
             </div>
         )
         

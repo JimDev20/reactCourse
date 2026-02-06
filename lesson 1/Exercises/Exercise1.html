@@ -37,14 +37,24 @@
                 <p>Shipping cost cost: ${shippingCost}</p>
                 <p>Total cost: ${productCost + shippingCost}</p>
                 <p>today is {dayjs().format('MMMM D')}</p>
-                <p>Current time: {dayjs().format('HH:mm:ss')}</p>
+                
             </div>
         )
         
-
+const clock = <p>Current time: {dayjs().format('HH:mm:ss')}</p>
        
+      
+
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(exercises1);
+      const root = ReactDOM.createRoot(container);
+      root.render(exercises1);
+
+
+      setInterval(() => {
+        const clock = <p>Current time: {dayjs().format('HH:mm:ss')}</p>;
+        root.render(clock)
+      }, 1000);
+
     </script>
   </body>
 </html>
